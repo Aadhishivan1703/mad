@@ -1,146 +1,141 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 TimesNewRomanPS-BoldMT;\f1\froman\fcharset0 TimesNewRomanPSMT;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\csgray\c0;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+PROGRAM 9:
 
-\f0\b\fs13\fsmilli6960 \cf2 PROGRAM 9:\
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context=".MainActivity" >
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+android:orientation="vertical"
+android:padding="20dp" >
+<EditText
+android:id="@+id/etNum1"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="10dp"
+android:hint="Enter Number 1"
+android:inputType="numberDecimal" />
+<EditText
+android:id="@+id/etNum2"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="10dp"
+android:hint="Enter Number 2"
+android:inputType="numberDecimal" />
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="10dp"
+android:gravity="center"
+android:orientation="horizontal" >
+<Button
+android:id="@+id/btnAdd"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="+" />
+<Button
+android:id="@+id/btnSub"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginLeft="10dp"
+android:text="-" />
+<Button
+android:id="@+id/btnMul"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginLeft="10dp"
+android:text="×" />
+<Button
+android:id="@+id/btnDiv"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginLeft="10dp"
+android:text="÷" /></LinearLayout>
+<EditText
+android:id="@+id/etResult"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp"
+android:clickable="false"
+android:focusable="false"
+android:hint="Result" />
+</LinearLayout></RelativeLayout>
 
-\f1\b0 <RelativeLayout\
-xmlns:android="http://schemas.android.com/apk/res/android"\
-xmlns:tools="http://schemas.android.com/tools"\
-android:layout_width="match_parent"\
-android:layout_height="match_parent"\
-android:paddingBottom="@dimen/activity_vertical_margin"\
-android:paddingLeft="@dimen/activity_horizontal_margin"\
-android:paddingRight="@dimen/activity_horizontal_margin"\
-android:paddingTop="@dimen/activity_vertical_margin"\
-tools:context=".MainActivity" >\
-<LinearLayout\
-android:layout_width="match_parent"\
-android:layout_height="match_parent"\
-android:gravity="center"\
-android:orientation="vertical"\
-android:padding="20dp" >\
-<EditText\
-android:id="@+id/etNum1"\
-android:layout_width="match_parent"\
-android:layout_height="wrap_content"\
-android:layout_marginBottom="10dp"\
-android:hint="Enter Number 1"\
-android:inputType="numberDecimal" />\
-<EditText\
-android:id="@+id/etNum2"\
-android:layout_width="match_parent"\
-android:layout_height="wrap_content"\
-android:layout_marginBottom="10dp"\
-android:hint="Enter Number 2"\
-android:inputType="numberDecimal" />\
-<LinearLayout\
-android:layout_width="match_parent"\
-android:layout_height="wrap_content"\
-android:layout_marginBottom="10dp"\
-android:gravity="center"\
-android:orientation="horizontal" >\
-<Button\
-android:id="@+id/btnAdd"\
-android:layout_width="wrap_content"\
-android:layout_height="wrap_content"\
-android:text="+" />\
-<Button\
-android:id="@+id/btnSub"\
-android:layout_width="wrap_content"\
-android:layout_height="wrap_content"\
-android:layout_marginLeft="10dp"\
-android:text="-" />\
-<Button\
-android:id="@+id/btnMul"\
-android:layout_width="wrap_content"\
-android:layout_height="wrap_content"\
-android:layout_marginLeft="10dp"\
-android:text="\'d7" />\
-<Button\
-android:id="@+id/btnDiv"\
-android:layout_width="wrap_content"\
-android:layout_height="wrap_content"\
-android:layout_marginLeft="10dp"\
-android:text="\'f7" /></LinearLayout>\
-<EditText\
-android:id="@+id/etResult"\
-android:layout_width="match_parent"\
-android:layout_height="wrap_content"\
-android:layout_marginTop="10dp"\
-android:clickable="false"\
-android:focusable="false"\
-android:hint="Result" />\
-</LinearLayout></RelativeLayout>\
-package com.example.prog9;\
-import android.app.Activity;\
-import android.os.Bundle;\
-import android.view.View;\
-import android.widget.Button;\
-import android.widget.EditText;\
-import android.widget.Toast;\
-public class MainActivity extends Activity \{\
-EditText etNum1, etNum2, etResult;\
-Button btnAdd, btnSub, btnMul, btnDiv;\
-@Override\
-protected void onCreate(Bundle savedInstanceState) \{\
-super.onCreate(savedInstanceState);\
-setContentView(R.layout.activity_main);\
-etNum1 = (EditText) findViewById(R.id.etNum1);\
-etNum2 = (EditText) findViewById(R.id.etNum2);\
-etResult = (EditText) findViewById(R.id.etResult);\
-btnAdd = (Button) findViewById(R.id.btnAdd);\
-btnSub = (Button) findViewById(R.id.btnSub);\
-btnMul = (Button) findViewById(R.id.btnMul);\
-btnDiv = (Button) findViewById(R.id.btnDiv);\
-btnAdd.setOnClickListener(new View.OnClickListener() \{\
-@Override\
-public void onClick(View v) \{\
-calculate('+'); \} \});\
-btnSub.setOnClickListener(new View.OnClickListener() \{\
-@Override\
-public void onClick(View v) \{\
-calculate('-'); \} \});\
-btnMul.setOnClickListener(new View.OnClickListener() \{\
-@Override\
-public void onClick(View v) \{\
-calculate('*'); \} \});\
-btnDiv.setOnClickListener(new View.OnClickListener() \{\
-@Override\
-public void onClick(View v) \{\
-calculate('/'); \} \}); \}\
-private void calculate(char operator) \{\
-String n1 = etNum1.getText().toString();\
-String n2 = etNum2.getText().toString();\
-String n3 = "";\
-if (n1.equals(n3) || n2.equals(n3)) \{\
-Toast.makeText(this, "Enter both numbers",\
-Toast.LENGTH_SHORT)\
-.show();\
-return; \}\
-double num1 = Double.parseDouble(n1);\
-double num2 = Double.parseDouble(n2);\
-double result = 0;\
-switch (operator) \{\
-case '+':\
-result = num1 + num2;\
-break;\
-case '-':\
-result = num1 - num2;\
-break;\
-case '*':\
-result = num1 * num2;\
-break;\
-case '/':\
-if (num2 == 0) \{\
-Toast.makeText(this, "Cannot divide by zero",\
-Toast.LENGTH_SHORT).show();\
-return; \}\
-result = num1 / num2;\
-break; \}\
-etResult.setText(String.valueOf(result));\
-\}\
-\}}
+
+package com.example.prog9;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+public class MainActivity extends Activity {
+EditText etNum1, etNum2, etResult;
+Button btnAdd, btnSub, btnMul, btnDiv;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_main);
+etNum1 = (EditText) findViewById(R.id.etNum1);
+etNum2 = (EditText) findViewById(R.id.etNum2);
+etResult = (EditText) findViewById(R.id.etResult);
+btnAdd = (Button) findViewById(R.id.btnAdd);
+btnSub = (Button) findViewById(R.id.btnSub);
+btnMul = (Button) findViewById(R.id.btnMul);
+btnDiv = (Button) findViewById(R.id.btnDiv);
+btnAdd.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View v) {
+calculate('+'); } });
+btnSub.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View v) {
+calculate('-'); } });
+btnMul.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View v) {
+calculate('*'); } });
+btnDiv.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View v) {
+calculate('/'); } }); }
+private void calculate(char operator) {
+String n1 = etNum1.getText().toString();
+String n2 = etNum2.getText().toString();
+String n3 = "";
+if (n1.equals(n3) || n2.equals(n3)) {
+Toast.makeText(this, "Enter both numbers",
+Toast.LENGTH_SHORT)
+.show();
+return; }
+double num1 = Double.parseDouble(n1);
+double num2 = Double.parseDouble(n2);
+double result = 0;
+switch (operator) {
+case '+':
+result = num1 + num2;
+break;
+case '-':
+result = num1 - num2;
+break;
+case '*':
+result = num1 * num2;
+break;
+case '/':
+if (num2 == 0) {
+Toast.makeText(this, "Cannot divide by zero",
+Toast.LENGTH_SHORT).show();
+return; }
+result = num1 / num2;
+break; }
+etResult.setText(String.valueOf(result));
+}
+}
