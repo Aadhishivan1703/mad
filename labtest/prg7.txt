@@ -102,6 +102,8 @@ android:padding="10dp"/>
 </TableLayout>
 </FrameLayout>
 </LinearLayout>
+
+
 package com.example.prog7;
 import android.app.Activity;
 import android.os.Bundle;
